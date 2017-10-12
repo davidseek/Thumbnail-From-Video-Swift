@@ -12,6 +12,7 @@
 		6C316E941F8FB1B9005E4ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C316E921F8FB1B9005E4ED0 /* Main.storyboard */; };
 		6C316E961F8FB1B9005E4ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C316E951F8FB1B9005E4ED0 /* Assets.xcassets */; };
 		6C316E991F8FB1B9005E4ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C316E971F8FB1B9005E4ED0 /* LaunchScreen.storyboard */; };
+		6C316EA11F8FB8A8005E4ED0 /* PhotoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C316EA01F8FB8A8005E4ED0 /* PhotoServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6C316E951F8FB1B9005E4ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C316E981F8FB1B9005E4ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C316E9A1F8FB1B9005E4ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C316EA01F8FB8A8005E4ED0 /* PhotoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		6C316E8D1F8FB1B9005E4ED0 /* ThumbnailTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				6C316EA01F8FB8A8005E4ED0 /* PhotoServices.swift */,
 				6C316E8E1F8FB1B9005E4ED0 /* AppDelegate.swift */,
 				6C316E901F8FB1B9005E4ED0 /* ViewController.swift */,
 				6C316E921F8FB1B9005E4ED0 /* Main.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C316EA11F8FB8A8005E4ED0 /* PhotoServices.swift in Sources */,
 				6C316E911F8FB1B9005E4ED0 /* ViewController.swift in Sources */,
 				6C316E8F1F8FB1B9005E4ED0 /* AppDelegate.swift in Sources */,
 			);
@@ -275,6 +279,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XUZ6HBUE;
 				INFOPLIST_FILE = ThumbnailTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidseek.ThumbnailTestProject;
@@ -289,6 +294,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 69XUZ6HBUE;
 				INFOPLIST_FILE = ThumbnailTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidseek.ThumbnailTestProject;
