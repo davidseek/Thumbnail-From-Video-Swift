@@ -40,4 +40,4 @@ In this project it is already done. But if you want to use those in your project
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+MIT
