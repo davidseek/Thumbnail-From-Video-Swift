@@ -10,6 +10,7 @@
 import Foundation
 import MobileCoreServices
 import UIKit
+import AVFoundation
 
 
 class PhotoServices: NSObject {
@@ -17,7 +18,7 @@ class PhotoServices: NSObject {
     
     static let shared = PhotoServices()
     
-    internal var completion: ((URL) -> Void)!
+    internal var completion: ((URL)->Void)!
     internal let picker = UIImagePickerController()
     
     override init() {
@@ -34,6 +35,7 @@ class PhotoServices: NSObject {
     func getVideoFromCameraRoll(on: UIViewController, completion: @escaping (_ image: URL)->()) {
         
         self.picker.sourceType = .photoLibrary
+        self.picker.mediaTypes = [kUTTypeMovie as String]
         
         DispatchQueue.main.async {
             on.present(self.picker, animated: true) {
@@ -64,6 +66,36 @@ extension PhotoServices: UIImagePickerControllerDelegate, UINavigationController
                     
                 }
             }
+            
+        }
+        
+    }
+    
+    
+}
+
+//
+//
+// MARK: Thumbnail
+extension PhotoServices {
+    
+    
+    func getThumbnailFrom(path: URL) -> UIImage? {
+        
+        do {
+            
+            let asset = AVURLAsset(url: path , options: nil)
+            let imgGenerator = AVAssetImageGenerator(asset: asset)
+            imgGenerator.appliesPreferredTrackTransform = true
+            let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+            let thumbnail = UIImage(cgImage: cgImage)
+            
+            return thumbnail
+            
+        } catch let error {
+            
+            print("*** Error generating thumbnail: \(error.localizedDescription)")
+            return nil
             
         }
         
